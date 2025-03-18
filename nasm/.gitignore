@@ -1,0 +1,4 @@
+*.o
+libasm.so
+main.c
+test
