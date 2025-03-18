@@ -1,0 +1,4 @@
+panoramix
+*.o
+.vscode
+*.log
