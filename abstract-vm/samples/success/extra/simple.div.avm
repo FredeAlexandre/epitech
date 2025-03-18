@@ -1,0 +1,38 @@
+; Simple div test
+push int8(25)
+push float(5.0)
+div
+assert float(5.0)
+push int8(2)
+div
+assert float(2.5)
+
+clear
+
+push float(2.0)
+push float(3.0)
+div
+assert float(0.6666667)
+
+clear
+
+push double(2.0)
+push double(3.0)
+div
+assert double(0.666666666666667)
+
+clear
+
+push float(50.0)
+push double(2000.0)
+div
+assert double(0.025)
+
+clear
+
+push int8(0)
+push int8(5)
+div
+assert int8(0)
+
+exit

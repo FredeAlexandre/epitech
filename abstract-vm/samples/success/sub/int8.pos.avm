@@ -1,0 +1,6 @@
+; Expect two int8 with positive values be able to sub
+push int8(8)    ; v2
+push int8(2)    ; v1
+sub             ; v2 - v1
+push int8(6)
+exit

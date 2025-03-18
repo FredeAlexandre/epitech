@@ -1,0 +1,6 @@
+; Expect two int16 with positive values be able to sub
+push int16(567)     ; v2
+push int16(2)       ; v1
+sub                 ; v2 - v1
+push int16(565)
+exit

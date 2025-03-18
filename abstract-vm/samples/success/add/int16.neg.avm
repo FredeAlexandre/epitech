@@ -1,0 +1,9 @@
+; Expect two int16 with one negative values be able to add
+push int16(-678)
+push int16(2)
+add
+assert int16(-676)
+push int16(0)
+add
+assert int16(-676)
+exit

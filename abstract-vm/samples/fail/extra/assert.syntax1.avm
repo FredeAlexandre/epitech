@@ -1,0 +1,2 @@
+; invalid operand 
+assert double(double)

@@ -1,0 +1,17 @@
+; Expect two int32 with one negative values be able to sub
+push int32(456789)  ; v2
+push int32(-2)      ; v1
+sub                 ; v2 - v1
+assert int32(456791)
+push int32(0)
+sub
+assert int32(456791)
+clear
+
+push int32(-456789) ; v2
+push int32(2)       ; v1
+sub                 ; v2 - v1
+assert int32(-456791)
+clear
+
+exit

@@ -1,0 +1,7 @@
+; Replecating the TA dup
+push double(42.42)
+dup
+assert double(42.42)
+dump
+
+exit

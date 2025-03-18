@@ -1,0 +1,3 @@
+; Invalid arguments
+push int8(0)
+assert hello

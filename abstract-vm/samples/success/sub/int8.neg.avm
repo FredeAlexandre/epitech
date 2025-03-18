@@ -1,0 +1,17 @@
+; Expect two int8 with one negative values be able to sub
+push int8(8)    ; v2
+push int8(-2)   ; v1
+sub             ; v2 - v1
+assert int8(10)
+push int8(0)
+sub
+assert int8(10)
+clear
+
+push int8(-8)   ; v2
+push int8(2)    ; v1
+sub             ; v2 - v1
+assert int8(-10)
+clear
+
+exit

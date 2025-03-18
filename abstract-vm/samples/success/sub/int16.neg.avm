@@ -1,0 +1,17 @@
+; Expect two int16 with one negative values be able to sub
+push int16(567)     ; v2
+push int16(-2)      ; v1
+sub                 ; v2 - v1
+assert int16(569)
+push int16(0)
+sub
+assert int16(569)
+clear
+
+push int16(-567)    ; v2
+push int16(2)       ; v1
+sub                 ; v2 - v1
+assert int16(-569)
+clear
+
+exit

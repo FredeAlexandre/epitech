@@ -1,0 +1,1 @@
+assert double(0.24) int32(0)

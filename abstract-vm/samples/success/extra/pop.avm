@@ -1,0 +1,6 @@
+; Check pop
+push int8(0)
+push int16(1)
+pop
+assert int8(0)
+exit

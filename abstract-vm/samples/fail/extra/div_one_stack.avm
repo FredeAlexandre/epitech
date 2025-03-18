@@ -1,0 +1,3 @@
+; div one stack
+push int32(45)
+div

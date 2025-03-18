@@ -1,0 +1,4 @@
+; Expect int16 underflow when adding 1 to -32768
+push int16(-32768)
+push int16(1)
+sub
