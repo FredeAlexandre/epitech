@@ -1,0 +1,19 @@
+#!/bin/sh
+
+rm -rf build
+rm -rf lib
+rm -f arcade
+
+mkdir -p build
+cd build
+cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+cmake --build .
+cd tmp
+
+for f in *; do
+    if [ -x "$f" ]; then
+        ./"$f"
+    fi
+done
+
+cd ../..
