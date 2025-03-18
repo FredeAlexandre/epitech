@@ -1,0 +1,11 @@
+/*
+** EPITECH PROJECT, 2022
+** macros.h
+** File description:
+** The macros of the library
+*/
+
+#ifndef MY_STRING_STRUCTS
+    #define MY_STRING_STRUCTS
+
+#endif
