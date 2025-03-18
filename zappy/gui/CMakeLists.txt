@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/..)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/)
+
+project(zappy_gui VERSION 1.0)
+
+file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/**.cpp)
+add_executable(zappy_gui ${SRC_FILES})
+
+find_package(SDL2 REQUIRED)
+find_package(SDL2_image REQUIRED)
+find_package(SDL2_ttf REQUIRED)
+find_package(SDL2_net REQUIRED)
+find_package(SDL2_gfx REQUIRED)
+find_package(SDL2_mixer REQUIRED)
+
+include_directories(${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIR} ${SDL2_TTF_INCLUDE_DIR} ${SDL2_NET_INCLUDE_DIR} ${SDL2_GFX_INCLUDE_DIR} ${SDL2_MIXER_INCLUDE_DIR})
+target_link_libraries(zappy_gui ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES} ${SDL2_TTF_LIBRARIES} ${SDL2_NET_LIBRARIES} ${SDL2_GFX_LIBRARIES} ${SDL2_MIXER_LIBRARIES})
+
+target_include_directories(zappy_gui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

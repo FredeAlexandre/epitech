@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd server
+make
+cd ..
+
+cd ia
+make
+cd ..
